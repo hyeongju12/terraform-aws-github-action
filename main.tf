@@ -1,6 +1,6 @@
 terraform {
   cloud {
-    organization = "<MY-ORG>"
+    organization = "hjyoo"
     hostname     = "app.terraform.io" # default
 
     workspaces {
@@ -41,6 +41,7 @@ resource "aws_subnet" "hashicat" {
 
   tags = {
     name = "${var.prefix}-subnet"
+    environment = var.environment
   }
 }
 

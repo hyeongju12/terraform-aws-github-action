@@ -1,3 +1,15 @@
+variable "environment" {
+  description = "Define infrastructure's environment."
+  type = string
+  default = "dev"
+
+  validation {
+    condition = contains(["dev", "qa", "prod"], var.environment)
+    error_message = "THe environment value must be dev, qa, or prod"
+  }
+}
+
+
 variable "prefix" {
   description = "This prefix will be included in the name of most resources."
 }
