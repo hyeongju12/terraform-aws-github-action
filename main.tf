@@ -17,8 +17,7 @@ terraform {
 
 provider "aws" {
   region = var.region
-  profile = "default"
-  default_tags {
+\  default_tags {
     tags = {
       Project = "Coffee-Mug-Cake"
       Owner   = "jerry & tom"
